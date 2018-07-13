@@ -2,8 +2,7 @@
 
 def call(args) {
       assert args != null
-      sh '''echo ${args}'''
-      sh '''ls -al'''
+      echo "Arguments are ${args}"
 //      return sh(script: "sudo docker ${args}", returnStdout: true)
-      sh '''sudo docker ${args}'''
+      return (sh '''sudo docker ${args}''', returnStdout: true)
   }
