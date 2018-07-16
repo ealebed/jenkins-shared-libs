@@ -1,5 +1,5 @@
 def call() {
-  def Dockerfile
+//  def Dockerfile
   sh "Dockerfile = libraryResource 'Dockerfile'"
   sh "writeFile file: 'Dockerfile', text: Dockerfile"
   sh "ls -la"
