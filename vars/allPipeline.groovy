@@ -28,9 +28,11 @@ def call(body) {
             stage('Build') {
                 steps {
                 		script {
+					sh '''
 		                    sudo docker version
 		                    sudo docker build -t ealebed/hn:1.0.13 .
 		                    sudo docker image ls
+				    '''
                     }
                 }
             }
