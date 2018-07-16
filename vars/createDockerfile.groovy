@@ -1,6 +1,6 @@
 def call() {
-  sh "def Dockerfile = libraryResource 'Dockerfile'"
-  sh "writeFile file: 'Dockerfile', text: Dockerfile"
-  sh "ls -la"
-  sh "cat Dockerfile"
+  sh(script: "def Dockerfile = libraryResource 'Dockerfile'")
+  sh(script: "writeFile file: 'Dockerfile', text: Dockerfile")
+  sh(script:  "ls -la")
+  sh(script:  "cat Dockerfile")
 }
