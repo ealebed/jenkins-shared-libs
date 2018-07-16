@@ -18,19 +18,19 @@ def call(body) {
                 		script {
 			                  def tmpFile = libraryResource 'Dockerfile'
 			                  writeFile file: 'Dockerfile', text: tmpFile
-                  			sh '''
+                  			    sh '''
                     				ls -la
                     				cat Dockerfile
-                  			'''
+                  		  	    '''
                 		}
                 }
             }
             stage('Build') {
                 steps {
                 		script {
-                        sudo docker version
+		                    sudo docker version
 		                    sudo docker build -t ealebed/hn:1.0.13 .
-                        sudo docker image ls
+		                    sudo docker image ls
                     }
                 }
             }
