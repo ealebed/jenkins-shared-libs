@@ -29,9 +29,9 @@ def call(body) {
                 steps {
                 		script {
 					sh '''
-		                    sudo docker version
-		                    sudo docker build -t ealebed/hn:1.0.313 .
-		                    sudo docker image ls
+		                     docker version
+		                     docker build -t ealebed/hn:1.0.313 .
+		                     docker image ls
 				    '''
                     }
                 }
