@@ -30,7 +30,7 @@ def call(body) {
                 		script {
 					sh '''
 		                    sudo docker version
-		                    sudo docker build -t ealebed/hn:1.0.13 .
+		                    sudo docker build -t ealebed/hn:1.0.313 .
 		                    sudo docker image ls
 				    '''
                     }
